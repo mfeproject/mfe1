@@ -13,7 +13,6 @@ program mfe1s
   use init_procs
   use mfe_ode_solver
   use mfe_procs, only: eval_udot
-  use xlfutility, only: mclock
 
   implicit none
 
@@ -76,7 +75,7 @@ program mfe1s
 
     mode = RESUME_SOLN
     profile = get_soln_profile ()
-    cpusec = mclock() / 100.0_wp
+    call cpu_time(cpusec)
 
     call write_log
     call write_soln
