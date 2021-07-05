@@ -1,0 +1,15 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!
+!!  MFE1 --
+!!
+!!  This is a Fortran 90 implementation of the piecewise-linear
+!!  Gradient-Weighted Moving Finite Element Method (GWMFE) for
+!!  time-dependent systems of partial differential equations in
+!!  one space dimension.
+!!
+!!  Version 0.2, 1 August 1996
+!!
+!!  Neil N. Carlson, Dept of Math, Purdue University
+!!  Keith Miller, Dept of Math, University of California, Berkeley
+!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

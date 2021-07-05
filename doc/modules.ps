@@ -1,0 +1,528 @@
+%!PS
+%%BoundingBox: 0 0 550 690
+%%Creator: daVinci V2.0.1 (info available from daVinci@Informatik.Uni-Bremen.DE)
+%%For: carlson@taylor (Neil Carlson,808,41920)
+%%Title: modules
+%%CreationDate: Tue Jul 30 15:48:06 1996
+
+%%Pages: 1
+%%DocumentNeededResources:
+%%+ font LucidaSans
+%%+ font LucidaSans-Bold
+%%+ font LucidaSans-Italic
+%%+ font LucidaSans-BoldItalic
+%%+ font Times-Roman
+%%+ font Times-Bold
+%%+ font Times-Italic
+%%+ font Times-BoldItalic
+%%+ font Helvetica
+%%+ font Helvetica-Bold
+%%+ font Helvetica-Oblique
+%%+ font Helvetica-BoldOblique
+%%+ font Helvetica-Narrow
+%%+ font Helvetica-Narrow-Bold
+%%+ font Helvetica-Narrow-Oblique
+%%+ font Helvetica-Narrow-BoldOblique
+%%+ font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Courier-BoldOblique
+%%+ font ZapfChancery-MediumItalic
+%%EndComments
+
+%%BeginProlog
+/daVinci_dict 200 dict def
+daVinci_dict begin
+/fontsize 10 def
+
+/cp % NameOfFontToBeCopied
+{ findfont dup length dict begin 
+  { 1 index /FID ne {def} {pop pop} ifelse} forall 
+  /Encoding ISOLatin1Encoding def currentdict end 
+} def
+/rn % NameOfNewFontWithIsoEncoding
+{ exch definefont pop } def
+/sf % NameOfFontToBeSet
+{ findfont fontsize scalefont setfont } def
+
+% Copy all fonts to get ISO 8-bit chars
+/Times-Roman cp /FontTimes rn
+/Times-Bold cp /FontTimesBold rn
+/Times-Italic cp /FontTimesItalic rn
+/Times-BoldItalic cp /FontTimesBoldItalic rn
+/Helvetica-Narrow cp /FontHelveticaNarrow rn
+/Helvetica-Narrow-Bold cp /FontHelveticaNarrowBold rn
+/Helvetica-Narrow-Oblique cp /FontHelveticaNarrowItalic rn
+/Helvetica-Narrow-BoldOblique cp /FontHelveticaNarrowBoldItalic rn
+/Courier cp /FontCourier rn
+/Courier-Bold cp /FontCourierBold rn
+/Courier-Oblique cp /FontCourierItalic rn
+/Courier-BoldOblique cp /FontCourierBoldItalic rn
+/LucidaSans cp /FontLucida rn
+/LucidaSans-Bold cp /FontLucidaBold rn
+/LucidaSans-Italic cp /FontLucidaItalic rn
+/LucidaSans-BoldItalic cp /FontLucidaBoldItalic rn
+/Helvetica cp /FontHelvetica rn
+/Helvetica-Bold cp /FontHelveticaBold rn
+/Helvetica-Oblique cp /FontHelveticaItalic rn
+/Helvetica-BoldOblique cp /FontHelveticaBoldItalic rn
+
+% Define fonts
+/font_times_normal { /FontTimes sf } def
+/font_times_bold { /FontTimesBold sf } def
+/font_times_italic { /FontTimesItalic sf } def
+/font_times_bold_italic { /FontTimesBoldItalic sf } def
+/font_helvetica_normal { /FontHelveticaNarrow sf } def
+/font_helvetica_bold { /FontHelveticaNarrowBold sf } def
+/font_helvetica_italic { /FontHelveticaNarrowItalic sf } def
+/font_helvetica_bold_italic { /FontHelveticaNarrowBoldItalic sf } def
+/font_courier_normal { /FontCourier sf } def
+/font_courier_bold { /FontCourierBold sf } def
+/font_courier_italic { /FontCourierItalic sf } def
+/font_courier_bold_italic { /FontCourierBoldItalic sf } def
+
+% Special case: use font Helvetica, if Lucida is not supported
+/font_lucida_normal
+{ /LucidaSans dup FontDirectory exch known
+  { /FontLucida sf } { /FontHelvetica sf } ifelse pop
+} def
+/font_lucida_bold 
+{ /LucidaSans-Bold dup FontDirectory exch known
+  { /FontLucidaBold sf } { /FontHelveticaBold sf } ifelse pop
+} def
+/font_lucida_italic 
+{ /LucidaSans-Italic dup FontDirectory exch known
+  { /FontLucidaItalic sf } { /FontHelveticaItalic sf } ifelse pop
+} def
+/font_lucida_bold_italic 
+{ /LucidaSans-BoldItalic dup FontDirectory exch known
+  { /FontLucidaBoldItalic sf } { /FontHelveticaBoldItalic sf } ifelse pop
+} def
+
+/white {1 1 1 setrgbcolor} def
+/black {0 0 0 setrgbcolor} def
+
+/solid { } bind def
+/dotted { [1 2] 1 setdash} bind def
+/dashed { [4 8] 0 setdash} bind def
+
+/rectangle % OriginX OriginY Width Height
+{ newpath
+  3 index 3 index moveto % OriginX/OriginY
+  1 index 0 rlineto % OriginX+Width/OriginY
+  0 1 index neg rlineto % OriginX+Width/OriginY+Height
+  exch neg 0 rlineto % OriginX/OriginY+Height
+  0 exch rlineto % OriginX/OriginY
+  closepath pop pop
+} def
+/draw_rectangle { gsave rectangle stroke grestore} def
+/fill_rectangle { gsave rectangle fill grestore} def
+
+/circle % OriginX OriginY 2*Radius
+{ newpath
+  2 index 1 index 2 div add 2 index 2 index 2 div sub % CenterX/CenterY
+  2 index 2 div 0 360 arc
+  closepath pop pop pop
+} def
+/draw_circle { gsave circle stroke grestore} def
+/fill_circle { gsave circle fill grestore} def
+
+/ellipse % OriginX OriginY Width Height
+{ newpath
+  3 index 3 index 2 index 0.5 mul sub moveto % OriginX/OriginY-(Height/2)
+  3 index 3 index 2 index 0.14 mul add % OriginX/OriginY+(Height*0.14)
+  5 index 4 index add 5 index 4 index 0.14 mul add % OriginX+Width/OriginY+(Height*0.14)
+  7 index 6 index add 7 index 6 index 0.5 mul sub curveto % OriginX+Width/OriginY-(Height/2)
+  3 index 2 index add 3 index 2 index 1.14 mul sub % OriginX+Width/OriginY-(Height*1.14)
+  5 index 5 index 4 index 1.14 mul sub % OriginX/OriginY-(Height*1.14)
+  7 index 7 index 6 index 0.5 mul sub curveto % OriginX/OriginY-(Height/2)
+  closepath pop pop pop pop
+} def
+/draw_ellipse {gsave ellipse stroke grestore} def
+/fill_ellipse {gsave ellipse fill grestore} def
+
+/rhombus % OriginX OriginY Width Height
+{ newpath
+  3 index 2 index 2 div add 3 index moveto % OriginX+(Width/2)/OriginY
+  1 index 2 div 1 index 2 div neg rlineto % OriginX+Width/OriginY-(Height/2)
+  1 index 2 div neg 1 index 2 div neg rlineto % OriginX+(Width/2)/OriginY-Height
+  1 index 2 div neg 1 index 2 div rlineto % OriginX/OriginY-(Height/2)
+  closepath pop pop pop pop
+} def
+/draw_rhombus {gsave rhombus stroke grestore} def
+/fill_rhombus {gsave rhombus fill grestore} def
+
+/draw_string % String CenterX CenterY
+{ gsave moveto show grestore
+} def
+
+/draw_centered_string % String CenterX CenterY
+{ gsave newpath 
+	exch 2 index stringwidth pop 2 div sub exch 
+	moveto show grestore
+} def
+
+/draw_line % StartX StartY EndX EndX
+{ gsave newpath 3 index 3 index moveto lineto closepath pop pop 
+	stroke grestore
+} def
+
+/draw_arrow % HeadX HeadY Point1X Point1Y Point2X Point2Y
+{ gsave newpath moveto lineto lineto closepath fill grestore} def
+
+/draw_selfref_circle % OriginX OriginY 2*Radius
+{ gsave newpath
+  2 index 1 index 2 div add 2 index 2 index 2 div sub % CenterX/CenterY
+  2 index 2 div 45 360 arc
+  pop pop pop stroke grestore
+} def
+
+/draw_selfref_circle_horizontal % OriginX OriginY 2*Radius
+{ gsave newpath
+  2 index 1 index 2 div add 2 index 2 index 2 div sub % CenterX/CenterY
+  2 index 2 div 135 450 arc
+  pop pop pop stroke grestore
+} def
+
+/readstring {
+  currentfile exch readhexstring pop  
+} bind def
+/picstr 1 string def
+
+/daVinci_logo
+{ /ZapfChancery-MediumItalic findfont 10 scalefont setfont
+  (daVinci) show
+  4 0 rmoveto /Helvetica findfont 8 scalefont setfont (V2.0.1) show} def
+
+%%EndProlog
+
+%%BeginSetup
+%%IncludeResource:
+%%+ font LucidaSans
+%%+ font LucidaSans-Bold
+%%+ font LucidaSans-Italic
+%%+ font LucidaSans-BoldItalic
+%%+ font Times-Roman
+%%+ font Times-Bold
+%%+ font Times-Italic
+%%+ font Times-BoldItalic
+%%+ font Helvetica
+%%+ font Helvetica-Bold
+%%+ font Helvetica-Oblique
+%%+ font Helvetica-BoldOblique
+%%+ font Helvetica-Narrow
+%%+ font Helvetica-Narrow-Bold
+%%+ font Helvetica-Narrow-Oblique
+%%+ font Helvetica-Narrow-BoldOblique
+%%+ font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Courier-BoldOblique
+%%+ font ZapfChancery-MediumItalic
+%%EndSetup
+
+%%Page: 1 1
+
+gsave 591 20 moveto 180 rotate daVinci_logo grestore
+25 dup translate
+90 rotate 0 489 neg translate
+76 36 neg translate
+1.0000 dup scale
+
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  470 405 458 405 461 412 draw_arrow 332 447 459 408 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  423 202 429 212 434 206 draw_arrow 472 244 431 209 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  472 295 472 244 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  472 346 472 295 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  494 387 472 346 draw_line
+1 setlinewidth grestore
+
+font_lucida_bold
+ 0.68 1.00 0.84 setrgbcolor  387 202 53 19 fill_rectangle
+black 387 202 53 19 draw_rectangle
+(bc_data) 413 189 draw_centered_string
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  390 35 400 41 402 34 draw_arrow 578 82 401 37 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  578 139 578 82 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  578 193 578 139 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  578 244 578 193 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  578 295 578 244 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  578 346 578 295 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  514 387 578 346 draw_line
+1 setlinewidth grestore
+
+font_lucida_bold
+ 0.68 1.00 0.84 setrgbcolor  328 37 62 19 fill_rectangle
+black 328 37 62 19 draw_rectangle
+(mfe_data) 359 24 draw_centered_string
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  521 354 512 362 520 366 draw_arrow 504 387 516 364 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  449 94 456 103 461 96 draw_arrow 525 139 459 99 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  525 193 525 139 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  525 244 525 193 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  525 295 525 244 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  525 336 525 295 draw_line
+1 setlinewidth grestore
+
+font_lucida_italic
+black 391 90 84 25 fill_rectangle
+ 0.68 1.00 0.84 setrgbcolor  387 94 84 25 fill_rectangle
+black 387 94 84 25 draw_rectangle
+390 91 78 19 draw_rectangle
+(problem_data) 429 78 draw_centered_string
+
+font_lucida_italic
+ 0.90 0.90 0.90 setrgbcolor  489 355 72 19 fill_rectangle
+black 489 355 72 19 draw_rectangle
+(problem_init) 525 342 draw_centered_string
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  421 253 417 264 425 264 draw_arrow 421 295 421 264 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  421 346 421 295 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  484 387 421 346 draw_line
+1 setlinewidth grestore
+
+font_lucida_bold
+ 0.68 1.00 0.84 setrgbcolor  387 253 69 19 fill_rectangle
+black 387 253 69 19 draw_rectangle
+(norm_data) 421 240 draw_centered_string
+
+font_lucida_bold
+ 0.90 0.90 0.90 setrgbcolor  470 406 59 19 fill_rectangle
+black 470 406 59 19 draw_rectangle
+(initialize) 499 393 draw_centered_string
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  154 304 150 315 158 315 draw_arrow 154 346 154 315 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  154 397 154 346 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  276 445 154 397 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  88 253 95 262 100 255 draw_arrow 139 285 97 259 draw_line
+1 setlinewidth grestore
+
+font_lucida_bold
+ 0.98 0.92 1.00 setrgbcolor  39 253 70 19 fill_rectangle
+black 39 253 70 19 draw_rectangle
+(bls_solver) 74 240 draw_centered_string
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  294 253 282 253 285 260 draw_arrow 187 285 283 256 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  398 202 386 203 390 211 draw_arrow 340 234 388 207 draw_line
+1 setlinewidth grestore
+
+font_lucida_bold
+ 0.98 0.92 1.00 setrgbcolor  293 253 60 19 fill_rectangle
+black 293 253 60 19 draw_rectangle
+(bc_procs) 323 240 draw_centered_string
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  193 253 183 258 189 264 draw_arrow 163 286 186 261 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  208 151 202 161 210 163 draw_arrow 201 193 207 162 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  201 234 201 193 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  223 91 216 100 223 103 draw_arrow 212 126 220 102 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  337 37 325 37 328 45 draw_arrow 249 72 327 41 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  161 37 168 47 172 40 draw_arrow 211 72 170 43 draw_line
+1 setlinewidth grestore
+
+font_lucida_bold
+ 0.78 0.89 0.97 setrgbcolor  110 37 78 19 fill_rectangle
+black 110 37 78 19 draw_rectangle
+(local_arrays) 149 24 draw_centered_string
+
+font_lucida_bold
+ 0.78 0.89 0.97 setrgbcolor  179 91 93 19 fill_rectangle
+black 179 91 93 19 draw_rectangle
+(local_laplacian) 225 78 draw_centered_string
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  151 36 150 48 157 46 draw_arrow 162 82 153 47 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  199 126 162 82 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  348 37 337 40 342 47 draw_arrow 288 82 339 44 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  227 126 288 82 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  387 92 375 91 377 99 draw_arrow 249 129 376 95 draw_line
+1 setlinewidth grestore
+
+font_lucida_italic
+ 0.78 0.89 0.97 setrgbcolor  169 151 80 25 fill_rectangle
+black 169 151 80 25 draw_rectangle
+172 148 74 19 draw_rectangle
+(problem_pde) 209 135 draw_centered_string
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  160 202 165 213 171 207 draw_arrow 192 234 168 210 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  197 151 186 155 192 161 draw_arrow 162 183 189 158 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  149 37 146 48 153 48 draw_arrow 152 82 149 48 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  152 139 152 82 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  152 183 152 139 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  355 37 347 45 354 49 draw_arrow 334 82 351 47 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  334 139 334 82 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  185 184 334 139 draw_line
+1 setlinewidth grestore
+
+font_lucida_bold
+ 0.78 0.89 0.97 setrgbcolor  120 202 65 19 fill_rectangle
+black 120 202 65 19 draw_rectangle
+(local_mfe) 152 189 draw_centered_string
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  82 202 91 209 94 202 draw_arrow 173 234 93 205 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  134 37 122 39 127 46 draw_arrow 57 82 124 42 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  57 139 57 82 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  57 183 57 139 draw_line
+1 setlinewidth grestore
+
+font_lucida_bold
+ 0.78 0.89 0.97 setrgbcolor  18 202 78 19 fill_rectangle
+black 18 202 78 19 draw_rectangle
+(local_global) 57 189 draw_centered_string
+
+font_lucida_bold
+ 0.78 0.89 0.97 setrgbcolor  133 253 137 19 fill_rectangle
+black 133 253 137 19 draw_rectangle
+(local_mfe_procedures) 201 240 draw_centered_string
+
+font_lucida_bold
+ 0.98 0.92 1.00 setrgbcolor  120 304 69 19 fill_rectangle
+black 120 304 69 19 draw_rectangle
+(mfe_procs) 154 291 draw_centered_string
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  260 355 256 366 264 366 draw_arrow 260 397 260 366 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  292 440 260 397 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  348 304 336 305 340 312 draw_arrow 280 336 338 308 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  360 37 359 49 366 47 draw_arrow 370 82 362 48 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  370 139 370 82 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  370 193 370 139 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  370 244 370 193 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  366 285 370 244 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  412 252 401 256 407 262 draw_arrow 376 285 404 259 draw_line
+1 setlinewidth grestore
+
+font_lucida_bold
+ 0.98 0.92 1.00 setrgbcolor  328 304 76 19 fill_rectangle
+black 328 304 76 19 draw_rectangle
+(norm_procs) 366 291 draw_centered_string
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  172 304 180 312 184 305 draw_arrow 240 336 182 308 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  258 304 255 315 262 315 draw_arrow 260 336 258 315 draw_line
+1 setlinewidth grestore
+
+font_lucida_bold
+ 0.98 0.92 1.00 setrgbcolor  212 304 92 19 fill_rectangle
+black 212 304 92 19 draw_rectangle
+(fp_accelerator) 258 291 draw_centered_string
+
+font_lucida_bold
+ 0.98 0.92 1.00 setrgbcolor  208 355 104 19 fill_rectangle
+black 208 355 104 19 draw_rectangle
+(mfe_ode_solver) 260 342 draw_centered_string
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  300 406 297 417 305 417 draw_arrow 303 439 301 417 draw_line
+1 setlinewidth grestore
+gsave 1 setlinewidth
+ 0.00 0.00 0.00 setrgbcolor  267 355 271 366 277 361 draw_arrow 293 387 274 364 draw_line
+1 setlinewidth grestore
+
+font_lucida_bold
+ 0.90 0.90 0.90 setrgbcolor  277 406 46 19 fill_rectangle
+black 277 406 46 19 draw_rectangle
+(output) 300 393 draw_centered_string
+
+font_lucida_bold
+ 0.90 0.90 0.90 setrgbcolor  269 471 69 33 fill_ellipse
+black 269 471 69 33 draw_ellipse 272 468 63 27 draw_ellipse
+(mfe1s) 303 451 draw_centered_string
+
+end
+showpage
+%%Trailer
+%%EOF
