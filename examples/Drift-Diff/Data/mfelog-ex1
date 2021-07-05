@@ -1,0 +1,64 @@
+
+
+I N I T I A L   C O N D I T I O N S
+
+  Mesh segments (NSEG)         =     5
+  Elements per segment (NISEG) =     4     6    10     6     4
+  Initial solution (USEG)      =  0.0000E+00  0.0000E+00  0.0000E+00
+                               =  0.0000E+00  7.5000E-02  6.0000E-01
+                               =  0.0000E+00  8.7500E-02  7.0000E-01
+                               = -1.0000E+00  1.0000E-01  8.0000E-01
+                               = -1.0000E+00  1.1250E-01  9.0000E-01
+                               = -1.0000E+00  1.2500E-01  1.0000E+00
+ 
+  Left-end BC (BCL)            =     1     1     1
+  Right-end BC (BCR)           =     1     1     1
+
+
+M F E   P A R A M E T E R S
+
+  PDE weights (WPDE)           =  1.0000E+00  1.0000E-02
+  Segment visc type (KREG)     =     2
+  Segment visc coef (SEGVSC)   =  4.0000E-06  4.0000E-04
+  Segment spring coef (SEGSPR) =  0.0000E+00  0.0000E+00
+  Minimum element size (DXMIN) =  0.0000E+00
+  Jacob FD increment (FDINC)   =  1.0000E-08
+ 
+  Solver debug level (DEBUG)   =     0
+  Output frequency (OFREQ)     =     0
+  Maximum steps (MSTEP)        =   600
+  Output times (TOUT)          =  0.0000E+00  1.0000E+00  5.0000E+00  4.0000E+01
+ 
+  Relative dx tolerance (RTOL) =  1.0000E-01
+  Predictor tolerance (PTOL)   =  1.0000E-03  1.0000E-03  1.0000E-03
+ 
+  Initial time step (H)        =  1.0000E-06
+  Time step lower bound (HLB)  =  1.0000E-10
+  Time step upper bound (HUB)  =  1.0000E+10
+  Jacob update margin (MARGIN) =  2.0000E+00
+  FPI tolerance (NTOL)         =  1.0000E-01
+  Max FP iterations (MITR)     =     4
+ 
+  FPA vector tolerance (VTOL)  =  1.0000E-01
+  Max FPA vectors (MVEC)       =     3
+
+
+P R O B L E M   S P E C I F I C   P A R A M E T E R S
+
+  Hole and voltage scale factor=  1.8421E+01  1.0000E+00
+  Initial diffusion coefficient=  1.0000E-04
+  Voltage relaxation coefficien=  1.0000E-01
+
+
+** BEGINNING SOLUTION AT T =  0.000E+00
+
+   45:  T =  1.000E+00,  H =  1.00E-01,  CPU =    0.47(SEC)
+        NRE:NJE= 125:014,  NPF:NJF:NNR:NNF:NPEF= 000:000:004:000:000
+
+   73:  T =  5.000E+00,  H =  2.25E-01,  CPU =    0.73(SEC)
+        NRE:NJE= 217:017,  NPF:NJF:NNR:NNF:NPEF= 000:000:007:000:000
+
+  163:  T =  4.000E+01,  H =  3.04E-01,  CPU =    1.56(SEC)
+        NRE:NJE= 514:027,  NPF:NJF:NNR:NNF:NPEF= 000:000:016:000:000
+
+** Integrated to final TOUT.  Done.
