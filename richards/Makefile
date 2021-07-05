@@ -1,7 +1,7 @@
-VPATH = .:../source/common:../source/system
+VPATH = .:../source/common:../source/scalar
 
 VERSION = 0.2
-PROBLEM = NAVIER-STOKES
+PROBLEM = RICHARDS
 
 ###############################################################################
 #
@@ -14,17 +14,13 @@ PROBLEM = NAVIER-STOKES
 #FFLAGS = -O
 #LIB =
 #
-#   IBM's XLF compiler:
+#   IBM"s XLF compiler:
 #
 FC = f90
 FSUFFIX = f90
-FFLAGS = -u -O -qarch=ppc -qtune=601 -Q -qalias=noaryovrlp
+FFLAGS = -u -O -qarch=ppc -qtune=604 -Q
 LIB = -lmass
 #
-#   SUN
-# FC = f90
-# FSUFFIX = f90
-# FFLAGS = -O1
 ###############################################################################
 
 OBJ = mfeconst.o comio.o mfedata.o mfetypes.o locarray.o loclapl.o \
@@ -38,16 +34,6 @@ SRC = $(LIBOBJ:.o=.$(FSUFFIX)) $(OBJ:.o=.$(FSUFFIX))
 go: $(LIBOBJ) $(OBJ)
 	$(FC) $(FFLAGS) -o go $(LIBOBJ) $(OBJ) $(LIB)
 
-runem: ex1
-ex1: go
-	@cp -f Data/mfein-ex1 mfein
-	@chmod u+w mfein
-	time go
-	@mv -f mfelog mfelog-ex1
-	@mv -f mfegrf mfegrf-ex1
-	@echo "Results moved to mfelog-ex1 and mfegrf-ex1;"
-	@echo "compare with those archived the directory Data."
-	
 source: title.txt $(SRC)
 	cat $? > MFE1-$(VERSION)-$(PROBLEM).$(FSUFFIX)
 

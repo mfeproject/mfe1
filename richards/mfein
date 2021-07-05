@@ -1,0 +1,35 @@
+'nseg' 4
+'niseg' 10 10 5 5
+'yseg'   0.00      2.7
+         1.00      2.7
+         1.10      1.0
+	 2.00      1.0
+         30.0      1.0
+'bcl'    1
+'bcr'    0
+'left'   1
+'right'  1
+'kreg'   2
+'segvsc' 1.0e-6
+'segspr' 0.0e-9
+'dxmin'  0.
+'fdinc'  1.e-7
+'imsg'   0
+'ofreq'  0
+'mstep'  1000
+'nout'   11
+'tout'   .0 .25 .5 .75 1. 2. 4. 8. 12. 16. 24.
+'rtol'   0.1
+'u-ptol' 1.e-3
+'x-ptol' 1.e-3
+'h'      1.e-5
+'hlb'    1.e-10
+'hub'    1.e+8
+'margin' 2.
+'ntol'   .1
+'mitr'   4
+'vtol'   .1
+'mvec'   3
+'t_scale' 3600
+'x_scale' 100
+'u_scale' 0.1

@@ -9,17 +9,17 @@ PROBLEM = BURGERS
 #
 #   Imagine1's F compiler (F90 subset language):
 #
-#FC = F
-#FSUFFIX = F
-#FFLAGS = -O
-#LIB =
+FC = F
+FSUFFIX = F
+FFLAGS = -O
+LIB =
 #
 #   IBM"s XLF compiler:
 #
-FC = f90
-FSUFFIX = f90
-FFLAGS = -u -w -O3 -qhot -qarch=604 -Q -qalias=noaryovrlp
-LIB = -lmass
+# FC = f90
+# FSUFFIX = f90
+# FFLAGS = -u -O -qarch=ppc -qtune=601 -Q -qalias=noaryovrlp
+# LIB = -lmass
 #
 ###############################################################################
 

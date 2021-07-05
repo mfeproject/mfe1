@@ -10,6 +10,5 @@
 !!  Version 0.2, 1 August 1996
 !!
 !!  Neil N. Carlson, Dept of Math, Purdue University
-!!  Keith Miller, Dept of Math, University of California, Berkeley
 !!
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

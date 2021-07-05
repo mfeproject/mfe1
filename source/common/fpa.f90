@@ -150,7 +150,7 @@ module fp_accelerator
        !!!
        !!! CHOLESKI FACTORIZATION OF H
 
-        h(first,first) = 1_wp
+        h(first,first) = 1.0_wp
         k = next(first)
         nvec = 1
 
@@ -170,7 +170,7 @@ module fp_accelerator
 
           end if
 
-          hkk = 1_wp                  ! Single stage of Choleski factorization.
+          hkk = 1.0_wp                  ! Single stage of Choleski factorization.
           j = first
           do
             if (j == k) then
