@@ -1,3 +1,12 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!
+!! Copyright (c) 1997 Neil N. Carlson
+!!
+!! This file is part of MFE1 which is released under the MIT license.  See the
+!! file LICENSE or visit http://opensource.org/licenses/MIT for details.
+!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 module initialize
 
   use mfe_constants
@@ -8,19 +17,19 @@ module initialize
   use problem_init
   use problem_data
   use common_io
-!  private !!! MUST COMMENT-OUT FOR XLF !!!
+  implicit none
+  private
 
   public  :: read_soln, read_data
-  private :: refine
 
-  integer, private :: nnod, nelt
+  integer, save :: nnod, nelt
 
-  integer, public :: ofreq, mstep, debug
-  real(kind=wp), dimension(:), allocatable, public :: tout
+  integer, save, public :: ofreq, mstep, debug
+  real(kind=wp), dimension(:), allocatable, save, public :: tout
 
   ! MFE ODE solver parameters.
-  integer, public  :: mtry, mitr, mvec
-  real(kind=wp), public :: h, hlb, hub, ntol, margin, vtol
+  integer, save, public  :: mtry, mitr, mvec
+  real(kind=wp), save, public :: h, hlb, hub, ntol, margin, vtol
 
   contains
 
@@ -53,7 +62,7 @@ module initialize
 
       call read_tagged_data (nseg, "Mesh segments (NSEG)")
 
-      allocate (niseg(nseg), useg(nvar,nseg+1))
+      allocate (niseg(nseg), useg(NVARS,nseg+1))
 
       call read_tagged_data (niseg, "Elements per segment (NISEG)")
       call read_tagged_data (useg, "Initial solution (USEG)")

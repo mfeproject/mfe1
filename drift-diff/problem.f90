@@ -1,6 +1,16 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!
+!! Copyright (c) 1997 Neil N. Carlson
+!!
+!! This file is part of MFE1 which is released under the MIT license.  See the
+!! file LICENSE or visit http://opensource.org/licenses/MIT for details.
+!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 module problem_data
 
   use mfe_constants, only: wp
+  implicit none
   private
   
   real(kind=wp), dimension(2), save, public :: scf
@@ -12,6 +22,7 @@ module problem_init
 
   use problem_data
   use common_io
+  implicit none
   private
   
   public :: read_problem_data
@@ -41,6 +52,7 @@ module problem_pde
   use mfe_data, only: eqw
   use local_arrays
   use local_laplacian
+  implicit none
   private
   
   public  :: pde_rhs
@@ -90,7 +102,7 @@ module problem_pde
       c3 = eqw(1) / scf(1)
       c4 = - eqw(2) / (eps * scf(2))
 
-      do i = 1, nelt
+      do i = 1, ncell
 
        !!!
        !!! AVERAGE OF P * ALPHAS BY 3-PT GAUSS QUADRATURE

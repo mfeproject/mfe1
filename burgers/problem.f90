@@ -1,6 +1,16 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!
+!! Copyright (c) 1997 Neil N. Carlson
+!!
+!! This file is part of MFE1 which is released under the MIT license.  See the
+!! file LICENSE or visit http://opensource.org/licenses/MIT for details.
+!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 module problem_data
 
   use mfe_constants, only: wp
+  implicit none
   private
   
   real(kind=wp), save, public :: visc, u_scale
@@ -11,6 +21,7 @@ module problem_init
 
   use problem_data
   use common_io
+  implicit none
   private
   
   public :: read_problem_data
@@ -38,6 +49,7 @@ module problem_pde
   use problem_data
   use local_arrays
   use local_laplacian
+  implicit none
   private
   
   public :: pde_rhs
@@ -61,7 +73,7 @@ module problem_pde
 
       c = - u_scale / 6.0_wp
 
-      do i = 1, nelt
+      do i = 1, ncell
 
         term1 = c * dx(i) * dudx(i)
         term2 = term1 * (2.0_wp * u(1,i) % u + u(2,i) % u)

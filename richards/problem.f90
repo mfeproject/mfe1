@@ -1,6 +1,7 @@
 module problem_data
 
   use mfe_constants, only: wp
+  implicit none
   private
   
   real(kind=wp), public :: t_scale, x_scale, u_scale
@@ -12,6 +13,7 @@ module problem_init
   use mfe_constants, only: wp
   use problem_data
   use common_io
+  implicit none
   private
   
   public :: read_problem_data
@@ -40,6 +42,7 @@ module problem_pde
   use problem_data
   use local_arrays
   use local_laplacian
+  implicit none
   private
   
   public  :: pde_rhs
@@ -70,7 +73,7 @@ module problem_pde
 
       real(kind=wp), intent(in) :: t
 
-      real(kind=wp), dimension(2,nelt) :: visc
+      real(kind=wp), dimension(2,ncell) :: visc
       
       real(kind=wp), parameter ::      & ! 3PT GAUSSIAN QUADRATURE PARAMETERS
           w1 = 5.0_wp / 18.0_wp,       & ! (5 / 18)
@@ -81,7 +84,7 @@ module problem_pde
       integer :: j
       real(kind=wp) :: u1, u2, u3, f_avg, f_1, f_2
       
-      do j = 1, nelt
+      do j = 1, ncell
       
         u1 = c1 * u(1,j) % u + c2 * u(2,j) % u
         u2 = 0.5_wp * (u(1,j) % u + u(2,j) % u)

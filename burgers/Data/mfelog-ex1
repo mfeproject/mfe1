@@ -9,62 +9,64 @@ I N I T I A L   C O N D I T I O N S
                                      1     1     1     1     1     1     1     1
                                      1     1     1     1     1     1     1     1
   Initial solution (USEG)      =  0.0000E+00  0.0000E+00
-                               =  1.9566E-01  2.5000E-02
-                               =  3.8723E-01  5.0000E-02
-                               =  5.7071E-01  7.5000E-02
-                               =  7.4229E-01  1.0000E-01
-                               =  8.9845E-01  1.2500E-01
-                               =  1.0360E+00  1.5000E-01
-                               =  1.1523E+00  1.7500E-01
-                               =  1.2449E+00  2.0000E-01
-                               =  1.3124E+00  2.2500E-01
-                               =  1.3536E+00  2.5000E-01
-                               =  1.3679E+00  2.7500E-01
-                               =  1.3556E+00  3.0000E-01
-                               =  1.3173E+00  3.2500E-01
-                               =  1.2545E+00  3.5000E-01
-                               =  1.1690E+00  3.7500E-01
-                               =  1.0633E+00  4.0000E-01
-                               =  9.4018E-01  4.2500E-01
-                               =  8.0286E-01  4.5000E-01
-                               =  6.5489E-01  4.7500E-01
+                               =  2.5000E-02  1.9566E-01
+                               =  5.0000E-02  3.8723E-01
+                               =  7.5000E-02  5.7071E-01
+                               =  1.0000E-01  7.4229E-01
+                               =  1.2500E-01  8.9845E-01
+                               =  1.5000E-01  1.0360E+00
+                               =  1.7500E-01  1.1523E+00
+                               =  2.0000E-01  1.2449E+00
+                               =  2.2500E-01  1.3124E+00
+                               =  2.5000E-01  1.3536E+00
+                               =  2.7500E-01  1.3679E+00
+                               =  3.0000E-01  1.3556E+00
+                               =  3.2500E-01  1.3173E+00
+                               =  3.5000E-01  1.2545E+00
+                               =  3.7500E-01  1.1690E+00
+                               =  4.0000E-01  1.0633E+00
+                               =  4.2500E-01  9.4018E-01
+                               =  4.5000E-01  8.0286E-01
+                               =  4.7500E-01  6.5489E-01
                                =  5.0000E-01  5.0000E-01
-                               =  3.4202E-01  5.2500E-01
-                               =  1.8483E-01  5.5000E-01
-                               =  3.2194E-02  5.7500E-01
-                               = -1.1226E-01  6.0000E-01
-                               = -2.4517E-01  6.2500E-01
-                               = -3.6351E-01  6.5000E-01
-                               = -4.6469E-01  6.7500E-01
-                               = -5.4655E-01  7.0000E-01
-                               = -6.0749E-01  7.2500E-01
-                               = -6.4645E-01  7.5000E-01
-                               = -6.6296E-01  7.7500E-01
-                               = -6.5716E-01  8.0000E-01
-                               = -6.2976E-01  8.2500E-01
-                               = -5.8202E-01  8.5000E-01
-                               = -5.1577E-01  8.7500E-01
-                               = -4.3328E-01  9.0000E-01
-                               = -3.3727E-01  9.2500E-01
-                               = -2.3080E-01  9.5000E-01
-                               = -1.1720E-01  9.7500E-01
-                               =  0.0000E+00  1.0000E+00
- 
-  Left-end BC (BCL)            =     1     1
-  Right-end BC (BCR)           =     1     1
+                               =  5.2500E-01  3.4202E-01
+                               =  5.5000E-01  1.8483E-01
+                               =  5.7500E-01  3.2194E-02
+                               =  6.0000E-01 -1.1226E-01
+                               =  6.2500E-01 -2.4517E-01
+                               =  6.5000E-01 -3.6351E-01
+                               =  6.7500E-01 -4.6469E-01
+                               =  7.0000E-01 -5.4655E-01
+                               =  7.2500E-01 -6.0749E-01
+                               =  7.5000E-01 -6.4645E-01
+                               =  7.7500E-01 -6.6296E-01
+                               =  8.0000E-01 -6.5716E-01
+                               =  8.2500E-01 -6.2976E-01
+                               =  8.5000E-01 -5.8202E-01
+                               =  8.7500E-01 -5.1577E-01
+                               =  9.0000E-01 -4.3328E-01
+                               =  9.2500E-01 -3.3727E-01
+                               =  9.5000E-01 -2.3080E-01
+                               =  9.7500E-01 -1.1720E-01
+                               =  1.0000E+00  0.0000E+00
+
+  Left-end boundary conditions =     1
+  Right-end boundary conditions=     1
+  Left-end node type           =     1
+  Right-end node type          =     1
 
 
 M F E   P A R A M E T E R S
 
   Segment visc type (KREG)     =     2
-  Segment visc coef (SEGVSC)   =  1.0000E-07
+  Segment visc coef (ELTVSC)   =  1.0000E-07
   Segment spring coef (SEGSPR) =  0.0000E+00
   Minimum element size (DXMIN) =  0.0000E+00
   Jacob FD increment (FDINC)   =  1.0000E-07
- 
+
   Solver debug level (DEBUG)   =     0
   Output frequency (OFREQ)     =     0
-  Maximum steps (MSTEP)        =  2000
+  Maximum steps (MSTEP)        =  1000
   Output times (TOUT)          =  0.0000E+00  2.0000E-01  4.0000E-01  6.0000E-01
                                   8.0000E-01  1.0000E+00  1.2000E+00  1.4000E+00
                                   1.4260E+00  1.4280E+00  1.4300E+00  1.4320E+00
@@ -72,17 +74,18 @@ M F E   P A R A M E T E R S
                                   1.4420E+00  1.4440E+00  1.4460E+00  1.4480E+00
                                   1.4500E+00  1.4520E+00  1.4540E+00  2.0000E+00
                                   4.0000E+00  6.0000E+00  8.0000E+00  1.0000E+01
- 
+
   Relative dx tolerance (RTOL) =  1.0000E-01
-  Predictor tolerance (PTOL)   =  1.0000E-03  1.0000E-03
- 
+  U predictor tolerance (PTOL) =  1.0000E-03
+  X predictor tolerance (PTOL) =  1.0000E-03
+
   Initial time step (H)        =  1.0000E-03
   Time step lower bound (HLB)  =  1.0000E-08
   Time step upper bound (HUB)  =  1.0000E+08
   Jacob update margin (MARGIN) =  2.0000E+00
   FPI tolerance (NTOL)         =  1.0000E-01
   Max FP iterations (MITR)     =     4
- 
+
   FPA vector tolerance (VTOL)  =  1.0000E-01
   Max FPA vectors (MVEC)       =     3
 
@@ -91,163 +94,144 @@ P R O B L E M   S P E C I F I C   P A R A M E T E R S
 
   PDE viscosity coefficient    =  1.0000E-04
   Dependent variable scale fact=  1.0000E+00
+** BEGINNING SOLUTION AT T =   0.000E+00     
 
+   90: T = 2.0000E-01, H = 3.307E-03, CPU = 9.998E-03 SEC
+       NRES:NJAC = 00325:0026,  NBP:NJF:NNR:NNF:NSR = 000:000:014:001:001
 
-** BEGINNING SOLUTION AT T =  0.000E+00
+** CHECK_SOLN: BAD ELEMENT (014)
 
-   90:  T =  2.000E-01,  H =  3.31E-03,  CPU =    0.82(SEC)
-        NRE:NJE= 325:026,  NPF:NJF:NNR:NNF:NPEF= 000:000:014:001:001
+** CHECK_SOLN: BAD ELEMENT (012)
 
-** CHECK_SOLN: Bad element -- no.   14
+** CHECK_SOLN: BAD ELEMENT (012)
 
-** CHECK_SOLN: Bad element -- no.   13
+** CHECK_SOLN: BAD ELEMENT (012)
 
-** CHECK_SOLN: Bad element -- no.   12
+** CHECK_SOLN: BAD ELEMENT (032)
 
-** CHECK_SOLN: Bad element -- no.   12
+** CHECK_SOLN: BAD ELEMENT (032)
 
-** CHECK_SOLN: Bad element -- no.   12
+** CHECK_SOLN: BAD ELEMENT (032)
 
-** CHECK_SOLN: Bad element -- no.   12
+** CHECK_SOLN: BAD ELEMENT (032)
 
-** CHECK_SOLN: Bad element -- no.   12
+  240: T = 4.0000E-01, H = 4.515E-03, CPU = 1.900E-02 SEC
+       NRES:NJAC = 00885:0071,  NBP:NJF:NNR:NNF:NSR = 007:000:040:012:003
 
-** CHECK_SOLN: Bad element -- no.   11
+** CHECK_SOLN: BAD ELEMENT (035)
 
-** CHECK_SOLN: Bad element -- no.   11
+** CHECK_SOLN: BAD ELEMENT (035)
 
-** CHECK_SOLN: Bad element -- no.   11
+  300: T = 6.0000E-01, H = 1.902E-02, CPU = 2.200E-02 SEC
+       NRES:NJAC = 01096:0093,  NBP:NJF:NNR:NNF:NSR = 007:000:050:015:004
 
-** CHECK_SOLN: Bad element -- no.   32
+** CHECK_SOLN: BAD ELEMENT (037)
 
-** CHECK_SOLN: Bad element -- no.   34
+** CHECK_SOLN: BAD ELEMENT (006)
 
-** CHECK_SOLN: Bad element -- no.   34
+** CHECK_SOLN: BAD ELEMENT (007)
 
-** CHECK_SOLN: Bad element -- no.    9
+** CHECK_SOLN: BAD ELEMENT (007)
 
-** CHECK_SOLN: Bad element -- no.    9
+  333: T = 8.0000E-01, H = 1.701E-02, CPU = 2.400E-02 SEC
+       NRES:NJAC = 01222:0104,  NBP:NJF:NNR:NNF:NSR = 008:000:059:017:004
 
-** CHECK_SOLN: Bad element -- no.    9
+  353: T = 1.0000E+00, H = 2.560E-02, CPU = 2.500E-02 SEC
+       NRES:NJAC = 01309:0114,  NBP:NJF:NNR:NNF:NSR = 008:000:066:019:004
 
-  238:  T =  4.000E-01,  H =  5.22E-03,  CPU =    2.08(SEC)
-        NRE:NJE= 859:071,  NPF:NJF:NNR:NNF:NPEF= 010:000:038:014:002
+  370: T = 1.2000E+00, H = 7.173E-03, CPU = 2.600E-02 SEC
+       NRES:NJAC = 01405:0122,  NBP:NJF:NNR:NNF:NSR = 008:000:074:022:004
 
-** CHECK_SOLN: Bad element -- no.   35
+** CHECK_SOLN: BAD ELEMENT (039)
 
-  299:  T =  6.000E-01,  H =  1.89E-02,  CPU =    2.64(SEC)
-        NRE:NJE=1103:091,  NPF:NJF:NNR:NNF:NPEF= 010:000:051:019:003
+** CHECK_SOLN: BAD ELEMENT (039)
 
-** CHECK_SOLN: Bad element -- no.   37
+** CHECK_SOLN: BAD ELEMENT (040)
 
-** CHECK_SOLN: Bad element -- no.    6
+  390: T = 1.4000E+00, H = 2.316E-02, CPU = 2.700E-02 SEC
+       NRES:NJAC = 01478:0128,  NBP:NJF:NNR:NNF:NSR = 011:000:077:024:004
 
-** CHECK_SOLN: Bad element -- no.    7
+** CHECK_SOLN: BAD ELEMENT (040)
 
-** CHECK_SOLN: Bad element -- no.    6
+  391: T = 1.4260E+00, H = 1.158E-02, CPU = 2.700E-02 SEC
+       NRES:NJAC = 01485:0129,  NBP:NJF:NNR:NNF:NSR = 012:000:078:024:004
 
-  333:  T =  8.000E-01,  H =  2.69E-02,  CPU =    2.96(SEC)
-        NRE:NJE=1235:103,  NPF:NJF:NNR:NNF:NPEF= 011:000:061:021:003
+** CHECK_SOLN: BAD ELEMENT (040)
 
-** CHECK_SOLN: Bad element -- no.   37
+  392: T = 1.4280E+00, H = 2.781E-03, CPU = 2.700E-02 SEC
+       NRES:NJAC = 01496:0130,  NBP:NJF:NNR:NNF:NSR = 013:000:079:025:004
 
-  352:  T =  1.000E+00,  H =  2.57E-02,  CPU =    3.16(SEC)
-        NRE:NJE=1311:112,  NPF:NJF:NNR:NNF:NPEF= 011:000:067:022:004
+  393: T = 1.4300E+00, H = 2.781E-03, CPU = 2.800E-02 SEC
+       NRES:NJAC = 01502:0131,  NBP:NJF:NNR:NNF:NSR = 013:000:080:025:004
 
-** CHECK_SOLN: Bad element -- no.    5
+  393: T = 1.4320E+00, H = 2.781E-03, CPU = 2.800E-02 SEC
+       NRES:NJAC = 01502:0131,  NBP:NJF:NNR:NNF:NSR = 013:000:080:025:004
 
-  368:  T =  1.200E+00,  H =  1.08E-02,  CPU =    3.35(SEC)
-        NRE:NJE=1387:120,  NPF:NJF:NNR:NNF:NPEF= 012:000:073:024:004
+** CHECK_SOLN: BAD ELEMENT (040)
 
-** CHECK_SOLN: Bad element -- no.   39
+** CHECK_SOLN: BAD ELEMENT (039)
 
-  387:  T =  1.400E+00,  H =  3.78E-02,  CPU =    3.54(SEC)
-        NRE:NJE=1460:127,  NPF:NJF:NNR:NNF:NPEF= 013:000:077:025:004
+  395: T = 1.4340E+00, H = 7.406E-04, CPU = 2.800E-02 SEC
+       NRES:NJAC = 01516:0133,  NBP:NJF:NNR:NNF:NSR = 014:000:082:026:004
 
-** CHECK_SOLN: Bad element -- no.   40
+  400: T = 1.4360E+00, H = 3.480E-04, CPU = 2.800E-02 SEC
+       NRES:NJAC = 01550:0137,  NBP:NJF:NNR:NNF:NSR = 014:000:086:027:004
 
-** CHECK_SOLN: Bad element -- no.   40
+  406: T = 1.4380E+00, H = 2.237E-04, CPU = 2.900E-02 SEC
+       NRES:NJAC = 01576:0139,  NBP:NJF:NNR:NNF:NSR = 014:000:088:027:004
 
-  388:  T =  1.426E+00,  H =  5.22E-03,  CPU =    3.55(SEC)
-        NRE:NJE=1463:128,  NPF:NJF:NNR:NNF:NPEF= 015:000:077:025:004
+  413: T = 1.4400E+00, H = 2.887E-04, CPU = 2.900E-02 SEC
+       NRES:NJAC = 01611:0143,  NBP:NJF:NNR:NNF:NSR = 014:000:092:027:004
 
-  388:  T =  1.428E+00,  H =  5.22E-03,  CPU =    3.56(SEC)
-        NRE:NJE=1463:128,  NPF:NJF:NNR:NNF:NPEF= 015:000:077:025:004
+  419: T = 1.4420E+00, H = 3.849E-04, CPU = 2.999E-02 SEC
+       NRES:NJAC = 01636:0145,  NBP:NJF:NNR:NNF:NSR = 014:000:094:027:004
 
-  388:  T =  1.430E+00,  H =  5.22E-03,  CPU =    3.56(SEC)
-        NRE:NJE=1463:128,  NPF:NJF:NNR:NNF:NPEF= 015:000:077:025:004
+  424: T = 1.4440E+00, H = 4.172E-04, CPU = 2.999E-02 SEC
+       NRES:NJAC = 01650:0145,  NBP:NJF:NNR:NNF:NSR = 014:000:094:027:004
 
-** CHECK_SOLN: Bad element -- no.   40
+  427: T = 1.4460E+00, H = 6.486E-04, CPU = 2.999E-02 SEC
+       NRES:NJAC = 01661:0146,  NBP:NJF:NNR:NNF:NSR = 014:000:095:027:004
 
-  389:  T =  1.432E+00,  H =  2.61E-03,  CPU =    3.58(SEC)
-        NRE:NJE=1470:129,  NPF:NJF:NNR:NNF:NPEF= 016:000:078:025:004
+  430: T = 1.4480E+00, H = 9.121E-04, CPU = 2.999E-02 SEC
+       NRES:NJAC = 01668:0146,  NBP:NJF:NNR:NNF:NSR = 014:000:095:027:004
 
-** CHECK_SOLN: Bad element -- no.   40
+  432: T = 1.4500E+00, H = 1.364E-03, CPU = 2.999E-02 SEC
+       NRES:NJAC = 01672:0146,  NBP:NJF:NNR:NNF:NSR = 014:000:095:027:004
 
-  390:  T =  1.434E+00,  H =  1.31E-03,  CPU =    3.60(SEC)
-        NRE:NJE=1476:130,  NPF:NJF:NNR:NNF:NPEF= 017:000:079:025:004
+  433: T = 1.4520E+00, H = 2.928E-03, CPU = 3.100E-02 SEC
+       NRES:NJAC = 01674:0147,  NBP:NJF:NNR:NNF:NSR = 014:000:095:027:004
 
-** CHECK_SOLN: Bad element -- no.   40
+  433: T = 1.4540E+00, H = 2.928E-03, CPU = 3.100E-02 SEC
+       NRES:NJAC = 01674:0147,  NBP:NJF:NNR:NNF:NSR = 014:000:095:027:004
 
-  394:  T =  1.436E+00,  H =  3.21E-04,  CPU =    3.66(SEC)
-        NRE:NJE=1499:132,  NPF:NJF:NNR:NNF:NPEF= 018:000:081:025:004
+  456: T = 2.0000E+00, H = 4.870E-02, CPU = 3.199E-02 SEC
+       NRES:NJAC = 01777:0156,  NBP:NJF:NNR:NNF:NSR = 014:000:102:030:004
 
-  401:  T =  1.438E+00,  H =  2.08E-04,  CPU =    3.75(SEC)
-        NRE:NJE=1531:135,  NPF:NJF:NNR:NNF:NPEF= 018:000:084:025:004
+** CHECK_SOLN: BAD ELEMENT (004)
 
-  408:  T =  1.440E+00,  H =  3.08E-04,  CPU =    3.84(SEC)
-        NRE:NJE=1566:139,  NPF:NJF:NNR:NNF:NPEF= 018:000:088:025:004
+** CHECK_SOLN: BAD ELEMENT (004)
 
-  413:  T =  1.442E+00,  H =  4.43E-04,  CPU =    3.90(SEC)
-        NRE:NJE=1587:141,  NPF:NJF:NNR:NNF:NPEF= 018:000:090:025:004
+** CHECK_SOLN: BAD ELEMENT (004)
 
-  419:  T =  1.444E+00,  H =  6.18E-04,  CPU =    3.93(SEC)
-        NRE:NJE=1600:141,  NPF:NJF:NNR:NNF:NPEF= 018:000:090:025:004
+  500: T = 4.0000E+00, H = 9.686E-02, CPU = 3.500E-02 SEC
+       NRES:NJAC = 02010:0180,  NBP:NJF:NNR:NNF:NSR = 017:000:121:040:004
 
-  422:  T =  1.446E+00,  H =  9.13E-04,  CPU =    3.96(SEC)
-        NRE:NJE=1610:142,  NPF:NJF:NNR:NNF:NPEF= 018:000:091:025:004
+  512: T = 6.0000E+00, H = 1.755E-01, CPU = 3.699E-02 SEC
+       NRES:NJAC = 02137:0195,  NBP:NJF:NNR:NNF:NSR = 017:000:135:047:004
 
-  425:  T =  1.448E+00,  H =  9.87E-04,  CPU =    3.97(SEC)
-        NRE:NJE=1617:142,  NPF:NJF:NNR:NNF:NPEF= 018:000:091:025:004
+** CHECK_SOLN: BAD ELEMENT (003)
 
-  427:  T =  1.450E+00,  H =  1.70E-03,  CPU =    3.99(SEC)
-        NRE:NJE=1621:142,  NPF:NJF:NNR:NNF:NPEF= 018:000:091:025:004
+** CHECK_SOLN: BAD ELEMENT (003)
 
-  428:  T =  1.452E+00,  H =  1.98E-03,  CPU =    4.00(SEC)
-        NRE:NJE=1623:143,  NPF:NJF:NNR:NNF:NPEF= 018:000:091:025:004
+** CHECK_SOLN: BAD ELEMENT (003)
 
-  429:  T =  1.454E+00,  H =  4.45E-03,  CPU =    4.01(SEC)
-        NRE:NJE=1625:143,  NPF:NJF:NNR:NNF:NPEF= 018:000:091:025:004
+  535: T = 8.0000E+00, H = 3.148E-01, CPU = 3.899E-02 SEC
+       NRES:NJAC = 02240:0205,  NBP:NJF:NNR:NNF:NSR = 020:000:142:050:004
 
-  449:  T =  2.000E+00,  H =  6.33E-02,  CPU =    4.17(SEC)
-        NRE:NJE=1692:148,  NPF:NJF:NNR:NNF:NPEF= 018:000:094:025:004
+** CHECK_SOLN: BAD ELEMENT (002)
 
-** CHECK_SOLN: Bad element -- no.    4
+** CHECK_SOLN: BAD ELEMENT (002)
 
-** CHECK_SOLN: Bad element -- no.    4
-
-  492:  T =  4.000E+00,  H =  1.06E-01,  CPU =    4.69(SEC)
-        NRE:NJE=1902:169,  NPF:NJF:NNR:NNF:NPEF= 020:000:108:034:004
-
-  504:  T =  6.000E+00,  H =  1.94E-01,  CPU =    5.04(SEC)
-        NRE:NJE=2037:186,  NPF:NJF:NNR:NNF:NPEF= 020:000:124:041:004
-
-** CHECK_SOLN: Bad element -- no.    3
-
-** CHECK_SOLN: Bad element -- no.    3
-
-** CHECK_SOLN: Bad element -- no.    3
-
-** CHECK_SOLN: Bad element -- no.    4
-
-** CHECK_SOLN: Bad element -- no.    5
-
-  527:  T =  8.000E+00,  H =  4.13E-01,  CPU =    5.32(SEC)
-        NRE:NJE=2149:197,  NPF:NJF:NNR:NNF:NPEF= 022:000:133:045:004
-
-** CHECK_SOLN: Bad element -- no.    1
-
-  532:  T =  1.000E+01,  H =  4.90E-01,  CPU =    5.46(SEC)
-        NRE:NJE=2202:204,  NPF:NJF:NNR:NNF:NPEF= 022:000:139:048:004
-
+  540: T = 1.0000E+01, H = 4.434E-01, CPU = 3.999E-02 SEC
+       NRES:NJAC = 02298:0213,  NBP:NJF:NNR:NNF:NSR = 020:000:149:054:004
 ** Integrated to final TOUT.  Done.

@@ -1,6 +1,16 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!
+!! Copyright (c) 1997 Neil N. Carlson
+!!
+!! This file is part of MFE1 which is released under the MIT license.  See the
+!! file LICENSE or visit http://opensource.org/licenses/MIT for details.
+!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 module problem_data
 
   use mfe_constants, only: wp
+  implicit none
   private
   
   real(kind=wp), save, public :: visc
@@ -11,6 +21,7 @@ module problem_init
 
   use problem_data
   use common_io
+  implicit none
   private
   
   public :: read_problem_data
@@ -38,6 +49,7 @@ module problem_pde
   use mfe_data, only: eqw
   use local_arrays
   use local_laplacian
+  implicit none
   private
   
   public  :: pde_rhs
@@ -71,7 +83,7 @@ module problem_pde
        real(kind=wp), dimension(3) :: umid, f1, f2, favg
        real(kind=wp), parameter :: c1 = 1.0_wp / 6.0_wp, c2 = 4.0_wp / 6.0_wp
 
-       do i = 1, nelt
+       do i = 1, ncell
 
          f1 = flux (u(1,i) % u)                      ! Flux at left endpoint.
          f2 = flux (u(2,i) % u)                      ! Flux at right endpoint.

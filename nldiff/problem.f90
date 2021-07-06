@@ -1,6 +1,16 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!
+!! Copyright (c) 1997 Neil N. Carlson
+!!
+!! This file is part of MFE1 which is released under the MIT license.  See the
+!! file LICENSE or visit http://opensource.org/licenses/MIT for details.
+!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 module problem_data
 
   use mfe_constants, only: wp
+  implicit none
   private
   
   ! Change of variable functions
@@ -120,6 +130,7 @@ module problem_init
   use mfe_constants, only: wp
   use problem_data
   use common_io
+  implicit none
   private
   
   public :: read_problem_data
@@ -147,6 +158,7 @@ module problem_pde
   use problem_data
   use local_arrays
   use local_laplacian
+  implicit none
   private
   
   public  :: pde_rhs
@@ -181,8 +193,8 @@ module problem_pde
       real(kind=wp), intent(in) :: t
 
       real(kind=wp) :: fac
-      real(kind=wp), dimension(2,nelt) :: visc
-      real(kind=wp), dimension(nelt) :: b_phi_1, b_phi_2
+      real(kind=wp), dimension(2,ncell) :: visc
+      real(kind=wp), dimension(ncell) :: b_phi_1, b_phi_2
       
       real(kind=wp), parameter ::      & ! 3PT GAUSSIAN QUADRATURE PARAMETERS
           w1 = 0.2464717596168727_wp,  & ! (5 / 18) * (Sqrt[5] + Sqrt[3]) / (2 Sqrt[5])
