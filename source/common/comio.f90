@@ -9,11 +9,11 @@ module common_io
   public  :: read_tagged_data, abort, element_info
 
   private :: read_tagged_rval, read_tagged_rvec, read_tagged_rmtx, &
-             read_tagged_ival, read_tagged_ivec, read_tagged_error
+             read_tagged_ival, read_tagged_ivec, read_tagged_char, read_tagged_error
 
   interface read_tagged_data
      module procedure read_tagged_rval, read_tagged_rvec, read_tagged_rmtx, &
-                      read_tagged_ival, read_tagged_ivec
+                      read_tagged_ival, read_tagged_ivec, read_tagged_char
   end interface
 
   integer, public :: input_unit, log_unit, out_unit
@@ -127,6 +127,26 @@ module common_io
       end if
 
     end subroutine read_tagged_ivec
+
+
+    subroutine read_tagged_char (data, desc)
+
+      character(len=*), intent(out) :: data
+      character(len=*), intent(in), optional :: desc
+
+      integer :: ios
+      character(len=16) :: tag
+
+      read (unit=input_unit, fmt=*, iostat=ios) tag, data
+      if (ios /= 0) then
+        call read_tagged_error (ios, trim(tag))
+      end if
+
+      if (present(desc)) then
+        write (unit=log_unit, fmt="(t3,a,t32,'=',a)") desc, trim(data)
+      end if
+
+    end subroutine read_tagged_char
 
 
     subroutine read_tagged_error (iostat, tag)
